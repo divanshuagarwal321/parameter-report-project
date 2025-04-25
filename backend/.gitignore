@@ -1,0 +1,12 @@
+# Dependencies
+/node_modules
+npm-debug.log
+yarn-error.log
+
+# IDE
+.idea/
+.vscode/
+*.sublime-workspace
+
+# Misc
+.DS_Store
