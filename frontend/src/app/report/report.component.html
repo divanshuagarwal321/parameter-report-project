@@ -1,14 +1,20 @@
-<div class="report-container">
-  <div class="chart-controls">
-    <button (click)="toggleMultiAxis()" title="Toggle Multi Axis">
-      <i class="fas fa-chart-line"></i>
-    </button>
-    <button (click)="setBenchmark('total_etp')" title="Set Total ETP Benchmark">
-      <i class="fas fa-flag"></i> Total ETP
-    </button>
-    <button (click)="setBenchmark('etp_ro')" title="Set ETP RO Benchmark">
-      <i class="fas fa-flag"></i> ETP RO
-    </button>
+<div class="report-box">
+  <div class="report-header">
+    <div class="title">Total ETP Recovery & Total ETP RO Recovery %</div>
+    <div class="controls">
+      <button mat-icon-button [matMenuTriggerFor]="menu" title="Configure Axes">
+        <mat-icon>timeline</mat-icon>
+      </button>
+      <button mat-icon-button (click)="openBenchmarkDialog()" title="Set Benchmarks">
+        <mat-icon class="benchmark-icon">square_foot</mat-icon>
+      </button>
+    </div>
   </div>
+  <mat-menu #menu="matMenu">
+    <app-axis-selector
+      [selection]="axisSelection"
+      (selectionChange)="onAxisSelectionChange($event)">
+    </app-axis-selector>
+  </mat-menu>
   <div echarts [options]="chartOption" class="chart"></div>
 </div>

@@ -1,0 +1,43 @@
+<div class="dialog-container">
+  <h1 mat-dialog-title class="dialog-title">Total ETP Recovery & Total ETP RO Recovery %</h1>
+  <form #benchmarkForm="ngForm" (ngSubmit)="onSubmit(benchmarkForm)">
+    <mat-dialog-content>
+      <div class="input-field">
+        <label>Total ETP recovery(s) (%)</label>
+        <mat-form-field appearance="outline">
+          <input matInput
+                 type="number"
+                 [pattern]="numberPattern"
+                 step="0.01"
+                 name="total_etp"
+                 [(ngModel)]="benchmarkData.total_etp"
+                 placeholder="y-axis value">
+        </mat-form-field>
+      </div>
+
+      <div class="input-field">
+        <label>ETP RO Recovery(s) (%)</label>
+        <mat-form-field appearance="outline">
+          <input matInput
+                 type="number"
+                 [pattern]="numberPattern"
+                 step="0.01"
+                 name="etp_ro"
+                 [(ngModel)]="benchmarkData.etp_ro"
+                 placeholder="y-axis value">
+        </mat-form-field>
+      </div>
+    </mat-dialog-content>
+
+    <mat-dialog-actions>
+      <button mat-button
+              type="submit"
+              color="primary"
+              [disabled]="!isFormValid()">Set</button>
+      <button mat-button
+              type="button"
+              (click)="onClose()"
+              class="close-button">Close</button>
+    </mat-dialog-actions>
+  </form>
+</div>

@@ -1,0 +1,76 @@
+.dialog-container {
+  padding: 16px;
+  max-width: 452px;
+  margin: 0 auto;
+}
+
+.dialog-title {
+  text-align: center;
+  font-size: 18px;
+  margin: 0 0 12px 0;
+}
+
+.input-field {
+  margin-bottom: 12px;
+}
+
+.input-field label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 350;
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 14px;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-wrapper {
+  margin: 0;
+  padding: 0;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-infix {
+  border-top: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  height: 35px;
+}
+
+::ng-deep .mat-form-field-appearance-outline input {
+  margin-top: 0;
+  margin-bottom: 0;
+  height: 100%;
+  line-height: 35px;
+}
+
+::ng-deep input[type=number]::-webkit-inner-spin-button,
+::ng-deep input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+mat-dialog-actions {
+  margin-top: 12px;
+  padding: 0;
+  gap: 8px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.close-button {
+  border: 1px solid #ff0000;
+  color: #ff0000;
+}
+
+.mat-button[color="primary"] {
+  border: 1px solid #3f51b5;
+  color: #3f51b5;
+}
+
+.mat-button[color="primary"]:disabled {
+  border-color: rgba(0, 0, 0, 0.12);
+  color: rgba(0, 0, 0, 0.26);
+}
