@@ -1,1 +1,14 @@
-<p>report works!</p>
+<div class="report-container">
+  <div class="chart-controls">
+    <button (click)="toggleMultiAxis()" title="Toggle Multi Axis">
+      <i class="fas fa-chart-line"></i>
+    </button>
+    <button (click)="setBenchmark('total_etp')" title="Set Total ETP Benchmark">
+      <i class="fas fa-flag"></i> Total ETP
+    </button>
+    <button (click)="setBenchmark('etp_ro')" title="Set ETP RO Benchmark">
+      <i class="fas fa-flag"></i> ETP RO
+    </button>
+  </div>
+  <div echarts [options]="chartOption" class="chart"></div>
+</div>
